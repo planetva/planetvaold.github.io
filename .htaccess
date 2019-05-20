@@ -3,11 +3,11 @@ RewriteCond %{SERVER_PORT} 80
 # RewriteRule ^(.*)$ https://planetva.com/$1 [R=301,L]
 # RewriteRule ^(.*)$ https://192.168.1.8/$1 [R=301,L]
 # RewriteRule ^(.*)$ %{HTTP_HOST}/$1 [R=301,L]
-RewriteRule ^(.*)$ https://planetva.com/$1 [R=301,L]
+RewriteRule ^(.*)$ https://website.planetva.com/$1 [R=301,L]
 
 # When using extensionless permalinks, output files written to disk will still have the proper file extension (typically .html), so the web server must be able to map requests without file extensions to these files.
 # see: https://jekyllrb.com/docs/permalinks/
 
-ErrorDocument 404 https://planetva.com/404.html
+ErrorDocument 404 https://website.planetva.com/404.html
 
 Options +MultiViews
