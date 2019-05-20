@@ -1,0 +1,6 @@
+User-agent: * 
+Disallow: /apps
+Disallow: /api
+Disallow: /catalog
+Disallow: /vmo3D/clients
+Disallow: /piwik
