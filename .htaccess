@@ -1,14 +1,11 @@
-RewriteEngine On
-#RewriteCond %{SERVER_PORT} 80
-# RewriteRule ^(.*)$ https://planetva.com/$1 [R=301,L]
-# RewriteRule ^(.*)$ https://192.168.1.8/$1 [R=301,L]
-# RewriteRule ^(.*)$ %{HTTP_HOST}/$1 [R=301,L]
+# RewriteEngine On
+# RewriteCond %{SERVER_PORT} 80
 # RewriteRule ^(.*)$ https://planetva.com/$1 [R=301,L]
 # following removes the .html extension from a html file for example yoursite.com/wallpaper.html to yoursite.com/wallpaper
 # RewriteRule ^([^\.]+)$ $1.html [NC,L]
 # following removes the .php extension from a php file for example yoursite.com/wallpaper.php to yoursite.com/wallpaper
-RewriteCond %{REQUEST_FILENAME}.php -f  
-RewriteRule ^/?([a-zA-Z0-9]+)$ $1.php [L]  
+# RewriteCond %{REQUEST_FILENAME}.php -f  
+# RewriteRule ^/?([a-zA-Z0-9]+)$ $1.php [L]  
 # following removes the .html extension from a html file for example yoursite.com/wallpaper.html to yoursite.com/wallpaper
 RewriteCond %{REQUEST_FILENAME}.html -f  
 RewriteRule ^/?([a-zA-Z0-9]+)$ $1.html [L]
