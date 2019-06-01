@@ -3,9 +3,15 @@ RewriteEngine On
 # RewriteRule ^(.*)$ https://planetva.com/$1 [R=301,L]
 # RewriteRule ^(.*)$ https://192.168.1.8/$1 [R=301,L]
 # RewriteRule ^(.*)$ %{HTTP_HOST}/$1 [R=301,L]
-RewriteRule ^(.*)$ https://planetva.com/$1 [R=301,L]
+# RewriteRule ^(.*)$ https://planetva.com/$1 [R=301,L]
 # following removes the .html extension from a html file for example yoursite.com/wallpaper.html to yoursite.com/wallpaper
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
+# RewriteRule ^([^\.]+)$ $1.html [NC,L]
+# following removes the .php extension from a php file for example yoursite.com/wallpaper.php to yoursite.com/wallpaper
+RewriteCond %{REQUEST_FILENAME}.php -f  
+RewriteRule ^/?([a-zA-Z0-9]+)$ $1.php [L]  
+# following removes the .html extension from a html file for example yoursite.com/wallpaper.html to yoursite.com/wallpaper
+RewriteCond %{REQUEST_FILENAME}.html -f  
+RewriteRule ^/?([a-zA-Z0-9]+)$ $1.html [L]
 
 # When using extensionless permalinks, output files written to disk will still have the proper file extension (typically .html), so the web server must be able to map requests without file extensions to these files.
 # see: https://jekyllrb.com/docs/permalinks/
